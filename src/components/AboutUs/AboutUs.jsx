@@ -15,6 +15,14 @@ export default function AboutUs() {
   const navigate = useNavigate();
   const developers = [
     {
+      img: "https://avatars.githubusercontent.com/u/92812509?v=4",
+      name: "Armando",
+      nacionalidad: "Colombia",
+      git: "https://github.com/armuCode",
+      linkedin: "https://www.linkedin.com/in/armucode",
+      ocupation: "Full Stack Developer",
+    },
+    {
       img: "https://avatars.githubusercontent.com/u/80359162?v=4",
       name: "Neider Urbano",
       nacionalidad: "Colombia",
@@ -38,14 +46,6 @@ export default function AboutUs() {
       git: "https://github.com/nilsonmax",
       linkedin:
         "https://www.linkedin.com/in/nilson-max-benitez-marquez-b909b4230/",
-      ocupation: "Full Stack Developer",
-    },
-    {
-      img: "https://avatars.githubusercontent.com/u/92812509?v=4",
-      name: "Armando",
-      nacionalidad: "Colombia",
-      git: "https://github.com/armuCode",
-      linkedin: "https://www.linkedin.com/in/armucode",
       ocupation: "Full Stack Developer",
     },
     {
@@ -90,8 +90,10 @@ export default function AboutUs() {
       <AboutUsContainer>
         <div className="text-4xl p-14">
           <div>
-            <h1>What is MusiCommerce?</h1>
-            <p className="mt-5">
+            <h2 className="bg-black text-white text-xl">
+              What is MusiCommerce?
+            </h2>
+            <p className="mt-5 text-base">
               We are an e-commerce specialized in the sale and distribution of
               musical instruments. Our main objective is to offer a variety of
               quality products to our potential buyers, which can be purchased
@@ -99,20 +101,7 @@ export default function AboutUs() {
             </p>
           </div>
         </div>
-
-        <AboutUsList>
-          <li>#</li>
-          <li>T</li>
-          <li>E</li>
-          <li>A</li>
-          <li>M</li>
-          <li>T</li>
-          <li>I</li>
-          <li>G</li>
-          <li>E</li>
-          <li>R</li>
-          <li>S</li>
-        </AboutUsList>
+        <h3 className="pl-40 text-xl font-bold">#TEAMTIGERS</h3>
 
         <MainProfileCard>
           <ProfileCard developer={developers} />
