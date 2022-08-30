@@ -1,10 +1,11 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import micro from "../../assets/micro.jpg";
+import guitar from "../../assets/guitar.jpg";
 const Banner = () => {
   return (
     <div className="relative">
-      <div className="absolute w-full h-32 bg-gradient-to-t from-gray-100 to-transparent bottom-0 z-20"/>
       <Carousel
         className=""
         autoPlay
@@ -12,42 +13,32 @@ const Banner = () => {
         showStatus={false}
         showIndicators={false}
         showThumbs={false}
-        interval={5000}
-      >
-        <div>
+        interval={5000}>
+        <div className="text-center">
+          <div className="absolute w-full h-3/5 bg-gradient-to-t from-black to-transparent bottom-0 z-20" />
           <img
+            src={guitar}
             loading="lazy"
-            src="https://www.opus37.com.ar/wp-content/uploads/2021/01/shows-musicales-ample-1500x600-1.jpg"
             layout="fill"
             alt="banner1"
+            className="w-20"
           />
+          <h2 className="text-4xl absolute top-20 right-1/3 z-20 text-white bg-black opacity-80">
+            Your music store
+          </h2>
         </div>
-        <div>
+        <div className="text-center">
+          <div className="absolute w-full h-3/5 bg-gradient-to-t from-black to-transparent bottom-0 z-20" />
           <img
+            src={micro}
             loading="lazy"
-            src="https://www.opus37.com.ar/wp-content/uploads/2021/01/taller-de-piano-ample-1500x600-1.jpg"
             layout="fill"
-            alt="banner2"
-
+            alt="banner1"
+            className="w-20"
           />
-        </div>
-        <div>
-          <img
-            loading="lazy"
-            src="https://www.opus37.com.ar/wp-content/uploads/2020/02/mic-y-mixer-1500x600-1.jpg"
-            layout="fill"
-            alt="banner3"
-
-          />
-        </div>
-        <div>
-          <img
-            loading="lazy"
-            src="https://www.opus37.com.ar/wp-content/uploads/2021/01/clases-ample-1500x600-1.jpg"
-            layout="fill"
-            alt="banner3"
-
-          />
+          <h2 className="text-4xl absolute top-20 right-1/3 z-20 text-white bg-black opacity-80">
+            Find the best instruments
+          </h2>
         </div>
       </Carousel>
     </div>
