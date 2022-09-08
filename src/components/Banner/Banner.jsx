@@ -23,7 +23,7 @@ const Banner = () => {
             alt="banner1"
             className="w-20"
           />
-          <h2 className="text-4xl absolute top-20 right-1/3 z-20 text-white bg-black opacity-80">
+          <h2 className="text-4xl absolute bottom-30 left-20 z-20 text-white bg-black opacity-80">
             Your music store
           </h2>
         </div>
@@ -36,7 +36,7 @@ const Banner = () => {
             alt="banner1"
             className="w-20"
           />
-          <h2 className="text-4xl absolute top-20 right-1/3 z-20 text-white bg-black opacity-80">
+          <h2 className="text-4xl absolute bottom-30 left-20 z-20 text-white bg-black opacity-80">
             Find the best instruments
           </h2>
         </div>

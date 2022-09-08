@@ -30,7 +30,7 @@ export default function Card({
   instruments,
   raiting,
 }) {
-  const dispatch = useDispatch();
+  let dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items);
   const favoriteItems = useSelector((state) => state.favorites.items);
   const favoritesList = useSelector((state) => state.favorites.favoritesList);
@@ -57,24 +57,13 @@ export default function Card({
 
   const toogleFavoriteAddHandler = () => {
     setIsFavorite((prevState) => !prevState);
-    // localStorage.setItem("isFavorite2", JSON.stringify(isFavorite));
-    // dispatch(addToFavorites(favoriteItems, instruments));
     dispatch(postFavorites(instruments, token)).then(() => {
       dispatch(getfavorites(token));
     });
   };
 
-  // const hanledDelete = (e, item) => {
-  //   console.log("estoy en hanled deleFavorite");
-  //   e.preventDefault();
-  //   // dispatch(removeFromFavorites(favoriteItems, item));
-  //   dispatch(deleteFavorites(item, token)).then(()=>{ dispatch(getfavorites(token))})
-  // };
-
   const toogleFavoriteRemoveHandler = () => {
     setIsFavorite((prevState) => !prevState);
-    // localStorage.setItem("isFavorite", JSON.stringify(isFavorite));
-    // dispatch(removeFromFavorites(favoriteItems, instruments));
     dispatch(deleteFavorites(instruments, token)).then(() => {
       dispatch(getfavorites(token));
     });
@@ -149,20 +138,6 @@ export default function Card({
         className="font-bold text-black important! flex">
         {paintStars(raiting)}
       </div>
-      {/* {console.log(favoriteItems, "isFavorite")} */}
-      {/* !favoriteItems ? */}
-      {/* {!isFavorite ? (
-        <HiOutlineHeart
-          className="h-10 cursor-pointer absolute top-0 left-5"
-          onClick={toogleFavoriteAddHandler}
-        />
-      ) : (
-        <HiHeart
-          className="h-10 cursor-pointer absolute top-0 left-5"
-          onClick={toogleFavoriteRemoveHandler}
-        />
-      )} */}
-
       {favoritesList && favoritesList.find((e) => e.id === id) ? (
         <HiHeart
           className="h-10 cursor-pointer absolute top-0 right-14"
